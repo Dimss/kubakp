@@ -26,8 +26,5 @@ public class KafkaController {
                 .ok()
                 .header("content-type", "application/json")
                 .body(response.getJsonPayload());
-
     }
-
-
 }
