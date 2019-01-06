@@ -1,6 +1,6 @@
 package com.redhat.kubakp.config;
 
-import com.redhat.kubakp.model.Square;
+import com.redhat.kubak.square.Square;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;

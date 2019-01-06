@@ -1,7 +1,8 @@
 package com.redhat.kubakp.controller;
 
+import com.redhat.kubak.square.Square;
 import com.redhat.kubakp.model.Response;
-import com.redhat.kubakp.model.Square;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
