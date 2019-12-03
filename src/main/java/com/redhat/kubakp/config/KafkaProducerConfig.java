@@ -18,14 +18,14 @@ import java.util.Map;
 public class KafkaProducerConfig {
 
     @Value("${kafka.bootstrap.server}")
-    private String bootstarpServers;
+    private String bootstrapServers;
     @Value("${kafka.bootstrap.server.port}")
     private String bootstrapServersPort;
 
     @Bean
     public ProducerFactory<String, Square> producerFactory() {
         Map<String, Object> config = new HashMap<>();
-        config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, String.format("%s:%s", bootstarpServers, bootstrapServersPort));
+        config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, String.format("%s:%s", bootstrapServers, bootstrapServersPort));
         config.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         config.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         return new DefaultKafkaProducerFactory<>(config);
